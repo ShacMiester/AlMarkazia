@@ -1,7 +1,24 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { forkJoin, map, Observable } from 'rxjs';
+interface Status {
+    id: number;
+    statusName: string;
+}
 
+interface Invoice {
+    invoiceNumber: string;
+    invoiceSeq: string | null;
+    supplierName: string;
+    invoiceDate: string;
+    currencyId: number;
+    exchangeRate: number;
+    paymentWayId: number;
+    statusId: number;
+    amount: number;
+    totalAmountJOD: number;
+    userId: number;
+}
 @Injectable({ providedIn: 'root' })
 export class CustomerService {
 
@@ -17,7 +34,7 @@ export class CustomerService {
     getTaskInvoices(): Observable<any> {
         return this.http.get('http://212.35.79.111/api/TaskInvoices/invoices')
     }
-    searchInvoices(invoiceNumber?: string, supplierName?: string, invoiceSeq?: string): Observable<any[]> {
+    searchInvoices(invoiceNumber?: string, supplierName?: string, invoiceSeq?: string): Observable<Invoice[]> {
         let params = new HttpParams();
 
         if (invoiceNumber) {
@@ -45,7 +62,7 @@ export class CustomerService {
                     const status = statuses.find((s: Status) => s.id === invoice.statusId);
                     return {
                         ...invoice,
-                        statusName: status ? status.statusName : unknownStatus.statusName // Assign statusName or 'Unknown'
+                        statusName: status ? status.statusName : unknownStatus.statusName
                     };
                 });
 
@@ -57,22 +74,4 @@ export class CustomerService {
         );
     }
 
-}
-interface Status {
-    id: number;
-    statusName: string;
-}
-
-interface Invoice {
-    invoiceNumber: string;
-    invoiceSeq: string | null;
-    supplierName: string;
-    invoiceDate: string;
-    currencyId: number;
-    exchangeRate: number;
-    paymentWayId: number;
-    statusId: number;
-    amount: number;
-    totalAmountJOD: number;
-    userId: number;
 }

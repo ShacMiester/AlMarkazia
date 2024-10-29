@@ -49,7 +49,7 @@ export class InvoiceComponent implements OnInit {
     this.customerService.getInvoicesWithStatuses().subscribe(
       data => {
         this.loading = false;
-        this.invoices = data.invoicesWithStatusNames; // Accessing invoices with status names
+        this.invoices = data.invoicesWithStatusNames;
         this.statuses = data.statuses;
         this.invoices.forEach(invoice => invoice.invoiceDate = new Date(invoice.invoiceDate));
       },
