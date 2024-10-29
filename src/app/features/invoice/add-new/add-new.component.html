@@ -1,0 +1,97 @@
+<div class="flex-col gap-28">
+    <div class="flex-col gap-16 main-container">
+        <div class="flex-col gap-36">
+            <div class="add-invoice-form flex-col gap-12">
+                <span class="add-invoice-form_title">General Info</span>
+                <div class="flex form gap-45">
+                    <p-dropdown class="form-dropdown full-width-dropdown" styleClass='w-100'
+                        placeholder="Toyota Motor Corporation" optionLabel="name"></p-dropdown>
+                    <input placeholder="25/25625578" class="form-dropdown full-width-dropdown" type="text" pInputText />
+                    <p-calendar styleClass='w-100' class="form-dropdown full-width-dropdown"
+                        placeholder="DD/MM/YYYY"></p-calendar>
+
+                </div>
+            </div>
+            <div class="add-invoice-form flex-col gap-12">
+                <span class="add-invoice-form_title">Transaction</span>
+                <div class="flex form form gap-45">
+                    <p-dropdown class="form-dropdown full-width-dropdown" styleClass='w-100' placeholder="USD"
+                        optionLabel="name"></p-dropdown>
+                    <p-dropdown class="form-dropdown full-width-dropdown" placeholder="0.71"
+                        optionLabel="name"></p-dropdown>
+
+
+                </div>
+            </div>
+            <div class="add-invoice-form flex-col gap-12">
+                <span class="add-invoice-form_title">Shipments</span>
+                <div class="flex form">
+                    <p-dropdown class="form-dropdown full-width-dropdown" placeholder="SPX1122232"
+                        optionLabel="name"></p-dropdown>
+                </div>
+            </div>
+        </div>
+        <div class="place-items_end">
+            <button class="gray">
+                <span>Save & Continue</span>
+            </button>
+        </div>
+
+    </div>
+    <div class="flex-col">
+        <div class="flex_space-between">
+            <div class="flex gap-20">
+
+                <div class="flex-col gap-8">
+                    <span class="status-text">Invoice Seq.</span>
+                </div>
+                <div class="hr"></div>
+                <div class="flex-col gap-8">
+                    <span class="status-text">Status</span>
+                </div>
+                <div class="hr"></div>
+                <div class="flex-col gap-8">
+                    <span class="status-text">Creation Date</span>
+                    <span class="creation-date">05/02/2024</span>
+
+                </div>
+            </div>
+            <p-dropdown optionLabel="name" placeholder="Mohammad Al Otaibi" />
+        </div>
+
+    </div>
+    <div class="flex_space-between">
+        <div class="flex-col gap-15 flex form gap-45">
+
+            <span class="add-invoice-form_title">Upload Items Methods</span>
+            <input placeholder="Item No." class=" " type="text" pInputText />
+        </div>
+    </div>
+    <div class="flex-col gap-24">
+        <div>table</div>
+        <div class="flex gap-27">
+            <div class="flex-col gap-4 flex-1">
+                <span class="add-invoice-form_title">Invoice Description</span>
+                <textarea pInputTextarea></textarea>
+            </div>
+            <div class="flex-col gap-16  flex-1 descriptive-container">
+                <span class="description-typo">Total Net Amount:</span>
+                <span class="description-typo">Total Discount Amount:</span>
+                <span class="description-typo">Net Total:</span>
+                <span class="description-typo">Total Tax Amount:</span>
+                <span class="description-typo">Grand Amount:</span>
+                <span class="description-typo">Exchange Rate:</span>
+                <span class="description-typo">Grand Amount:</span>
+            </div>
+        </div>
+
+    </div>
+    <div class="flex_space-between">
+        <button class="secondary">Cancel</button>
+
+        <div class="flex gap-5">
+            <button class="secondary advanced-filter-button">Advanced Filter</button>
+            <button class="tertary create-button">Create Receiving Invoice</button>
+        </div>
+    </div>
+</div>

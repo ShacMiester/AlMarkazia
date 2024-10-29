@@ -1,0 +1,7 @@
+$base-gap: 2px;
+
+@for $i from 1 through 100 {
+    .gap-#{$i} {
+        gap: $i * $base-gap;
+    }
+}

@@ -1,0 +1,115 @@
+.main-container {
+    padding: 32px 24px;
+}
+
+.form {
+    display: flex;
+    flex-wrap: wrap;
+
+    &-dropdown {
+        width: 337px;
+        flex: 0 0 337px;
+    }
+}
+
+:ng-deep .p-dropdown .p-component .p-inputwrapper {
+    width: 100% !important;
+}
+
+.full-width-container {
+    width: 100%; // Full width for the container
+}
+
+.full-width-dropdown ::ng-deep .p-dropdown,
+.full-width-dropdown ::ng-deep .p-calendar,
+.full-width-dropdown ::ng-deep .p-inputtext {
+    width: 100%;
+    border-top: unset;
+    border-left: unset;
+    border-right: unset;
+    border-radius: 0;
+
+
+    & :focus {
+        outline: unset;
+        outline: 0 none;
+        outline-offset: 0;
+        box-shadow: unset;
+    }
+}
+
+.p-inputtext {
+    border-top: unset;
+    border-left: unset;
+    border-right: unset;
+    border-radius: 0;
+    box-shadow: unset;
+}
+
+.full-width-dropdown ::ng-deep .p-dropdown:focus {
+    border-bottom: 1px solid transparent;
+}
+
+
+
+.full-width-dropdown ::ng-deep {
+    width: 100%;
+}
+
+::ng-deep .p-element .p-dropdown-label .p-inputtext .p-placeholder {
+    border-bottom: unset;
+
+}
+
+
+.add-invoice-form {
+    &_title {
+        font-size: 18px;
+        font-weight: 600;
+    }
+}
+
+.status-text {
+    font-family: Encode Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+
+}
+
+.description-typo {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #626262
+}
+
+.create-button {
+    background-color: #BBBBBB;
+    color: white
+}
+
+.advanced-filter-button {
+    color: #727272;
+}
+
+.descriptive-container {
+    padding: 24px 40px 24px 40px;
+    border-radius: 8px 0px 0px 0px;
+}
+
+.hr {
+    width: 1px;
+    height: 56px;
+    border-radius: 7px 0px 0px 0px;
+    background-color: #D9D9D9;
+}
+
+.creation-date {
+
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 20px;
+
+}

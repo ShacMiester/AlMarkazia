@@ -1,0 +1,99 @@
+.filter-with-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    i.pi-search {
+        position: absolute;
+        left: 10px;
+        color: #888;
+    }
+
+    input[type="text"] {
+        padding-left: 30px;
+    }
+}
+
+::ng-deep {
+    span.p-paginator-pages {
+        display: flex !important;
+    }
+}
+
+.advanced-search {
+    height: 0;
+    overflow: hidden;
+    border: unset !important;
+    transition: height .3s ease-out;
+    transition: padding 0.1s ease-in;
+
+    &.show {
+        height: 156px;
+        border: 1px solid #BBBBBB !important;
+        border-radius: 8px !important;
+        padding: 24px 16px !important;
+
+    }
+
+}
+
+.invoice-title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+}
+
+.invoice-sequence-container {
+    border: 1px solid #BBBBBB;
+    border-radius: 8px;
+    display: flex;
+    width: 576px;
+}
+
+.search-icon {
+    color: #BBBBBB;
+}
+
+.global-filter {
+    padding: 10px;
+    flex: 1;
+
+    &_input {
+        border: none;
+        outline: none;
+        width: 100%;
+    }
+}
+
+.rows-indicator {
+    color: #626262;
+    font-family: Encode Sans;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17.5px;
+    text-align: right;
+}
+
+th {
+    background-color: #F5F5F5;
+    width: 22%
+}
+
+.table-invoice-search {
+    outline: none;
+    border: 0;
+}
+
+i {
+    font-size: 1rem;
+}
+
+.advance-filters-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000000;
+}
+
+.align_center {
+    align-items: center;
+}

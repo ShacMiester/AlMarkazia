@@ -1,0 +1,33 @@
+:host {
+    --navbar-height: 56px;
+    height: fit-content;
+}
+
+.navbar-container {
+    padding: 12px 24px;
+    height: var(--navbar-height);
+    box-sizing: border-box;
+    padding-left: 16px;
+
+    &_start {
+        .backdrop {
+            background-color: #353535;
+            width: 26px;
+            height: 26px;
+            align-items: center;
+            display: inline-flex;
+        }
+    }
+
+    &_end {
+        align-items: center;
+
+        .user-container {
+            .user-name {
+                font-size: 12px;
+                font-weight: 600;
+                color: #131313;
+            }
+        }
+    }
+}

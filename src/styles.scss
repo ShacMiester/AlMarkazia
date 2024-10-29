@@ -1,1 +1,149 @@
+@import './styles/space.scss';
+
+
+.flex {
+    display: flex;
+
+    &_center {
+        @extend .flex;
+        align-items: center;
+    }
+
+    &_space-between {
+        @extend .flex;
+        justify-content: space-between;
+    }
+}
+
+.flex-col {
+    @extend .flex;
+    flex-direction: column;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
 /* You can add global styles to this file, and also import other style files */
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: "Encode Sans", sans-serif;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.user-initials {
+    text-align: center;
+    background: #13131380;
+    height: 32px;
+    width: 32px;
+    color: #FAFAFA;
+    text-align: center;
+    display: flex;
+    place-content: center;
+    align-items: center;
+    border-radius: 60px;
+}
+
+button {
+    cursor: pointer;
+    padding: 10px 16px 10px 16px;
+    gap: 8px;
+    border-radius: 8px;
+    display: flex;
+    outline: none;
+    border: unset;
+    align-items: center;
+
+    &.primary {
+        color: #FFFFFF;
+
+        background-color: #353535;
+    }
+
+    &.gray {
+        color: #FFFFFF;
+
+        background-color: #727272;
+    }
+
+    &.secondary {
+        border: 1px solid #626262 !important;
+        color: #353535;
+
+    }
+
+    &.tertary {
+        color: #626262;
+    }
+
+    &.search {
+        background-color: #727272;
+        color: #FFFFFF;
+    }
+
+}
+
+.place-items {
+    &_end {
+        place-items: end;
+    }
+}
+
+.p-datepicker {
+    box-shadow: 0px 4px 6px -2px #0000000D;
+
+    box-shadow: 0px 10px 15px 3px #0000001A;
+
+}
+
+.p-inputtext:enabled:focus {
+    outline: 0 none;
+    outline-offset: 0;
+    border-color: #d1d5db;
+}
+
+/* Target the scrollbar */
+::-webkit-scrollbar {
+    width: 4px;
+    /* Width for vertical scrollbar */
+    height: 4px;
+    /* Height for horizontal scrollbar */
+}
+
+/* Track of the scrollbar */
+::-webkit-scrollbar-track {
+    /* Background color of the track */
+}
+
+/* Handle of the scrollbar */
+::-webkit-scrollbar-thumb {
+    background-color: #353535;
+    /* Color for the scrollbar handle */
+    border-radius: 4px;
+    /* Rounded corners for a smoother look */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #353535;
+    /* Darker color on hover */
+}
+
+:ng-deep .p-dropdown {
+    border-top: unset;
+    /* border-bottom: unset; */
+    border-left: unset;
+    border-right: unset;
+}
+
+:ng-deep .p-dropdown:not(.p-disabled):hover {
+    border-color: unset !important;
+}
